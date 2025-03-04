@@ -74,7 +74,7 @@ This Flutter application recreates an e-commerce shop's home page UI, integratin
 ## Submission Details
 
 - **Repository:** [GitHub Repo](https://github.com/animeshagarwal96/Ecom.git)
-- **APK Download:** [APK Link](https://fileport.io/mdkYdEYkRFw8)
+- **APK Download:** [APK Link](https://fileport.io/DHtGrFgSJHvH)
 
 ## Author
 
