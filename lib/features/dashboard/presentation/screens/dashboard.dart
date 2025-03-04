@@ -227,7 +227,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                   // On Sale Filter
                   CheckboxListTile(
-                    title: const Text("All"),
+                    title: const Text(
+                      "All",
+                      style: TextStyle(
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17),
+                    ),
                     value: isSelectedAll(newCategoryList),
                     onChanged: (value) {
                       updateSate(() {
@@ -251,7 +257,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         itemCount: newCategoryList.length,
                         itemBuilder: (context, index) {
                           return CheckboxListTile(
-                            title: Text(newCategoryList[index].name),
+                            title: Text(
+                              newCategoryList[index].name,
+                              style: const TextStyle(
+                                  fontFamily: "Roboto",
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 17),
+                            ),
                             value: newCategoryList[index].isSelected,
                             onChanged: (value) {
                               updateSate(() {

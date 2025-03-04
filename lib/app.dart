@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
           designSize: const Size(414, 896),
           builder: (BuildContext context, Widget? child) {
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Ecom',
               theme: ThemeData(
                 primarySwatch: Colors.blue,
