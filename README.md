@@ -29,7 +29,7 @@ This Flutter application recreates an e-commerce shop's home page UI, integratin
 
 ## App Screenshot
 
-![App Screenshot](/lib/assets/images/Screenshot_1741100734.png)
+![App Screenshot](assets/images/Screenshot_1741100734.png)
 
 ## Installation & Setup
 
