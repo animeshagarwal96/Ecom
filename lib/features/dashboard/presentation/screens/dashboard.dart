@@ -6,6 +6,7 @@ import 'package:ecom/features/dashboard/presentation/bloc/bloc/dashboard_product
 import 'package:ecom/features/dashboard/presentation/widget/loaderwidget.dart';
 import 'package:ecom/features/dashboard/presentation/widget/product_card.dart';
 import 'package:ecom/features/dashboard/presentation/widget/retry_page.dart';
+import 'package:ecom/screen_util/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -100,16 +101,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           style: TextStyle(
                             color: Colors.white.withOpacity(0.8),
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 15.w,
                           ),
                         ),
                         const SizedBox(height: 5),
-                        const Text(
+                        Text(
                           "Cashback 20%",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 30,
+                            fontSize: 25.w,
                           ),
                         ),
                       ],
@@ -121,11 +122,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     children: [
                       Row(
                         children: [
-                          const Text(
+                          Text(
                             "Popular Products",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
-                                fontSize: 22,
+                                fontSize: 18.w,
                                 color: Colors.black87),
                           ),
                           IconButton(
@@ -135,7 +136,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   .iconTheme
                                   .color
                                   ?.withOpacity(0.6),
-                              size: 29,
+                              size: 25.w,
                             ),
                             onPressed: () {
                               showFilterBottomSheet(
@@ -146,11 +147,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                       InkWell(
                         onTap: () {},
-                        child: const Text("See more",
+                        child: Text("See more",
                             style: TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.w700,
-                              fontSize: 18,
+                              fontSize: 14.w,
                             )),
                       ),
                     ],
@@ -166,7 +167,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                childAspectRatio: 0.55,
+                                childAspectRatio: 0.54,
                                 crossAxisSpacing: 8,
                                 mainAxisSpacing: 8,
                               ),
@@ -212,10 +213,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "Filter Products",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                            fontSize: 16.w, fontWeight: FontWeight.bold),
                       ),
                       IconButton(
                         icon: const Icon(Icons.close),
@@ -227,12 +228,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                   // On Sale Filter
                   CheckboxListTile(
-                    title: const Text(
+                    title: Text(
                       "All",
                       style: TextStyle(
                           fontFamily: "Roboto",
                           fontWeight: FontWeight.w500,
-                          fontSize: 17),
+                          fontSize: 14.w),
                     ),
                     value: isSelectedAll(newCategoryList),
                     onChanged: (value) {
@@ -259,10 +260,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           return CheckboxListTile(
                             title: Text(
                               newCategoryList[index].name,
-                              style: const TextStyle(
+                              style: TextStyle(
                                   fontFamily: "Roboto",
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 17),
+                                  fontSize: 14.w),
                             ),
                             value: newCategoryList[index].isSelected,
                             onChanged: (value) {
@@ -297,10 +298,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         "Apply Filters",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(color: Colors.white, fontSize: 15.w),
                       ),
                     ),
                   ),
@@ -336,7 +337,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   AppBar _buildAppBar() {
     return AppBar(
       centerTitle: false,
-      toolbarHeight: 95,
+      toolbarHeight: 80.w,
       elevation: 0.0,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       automaticallyImplyLeading: false,
@@ -358,19 +359,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   focusNode: searchFocusNode,
                   controller: searchController,
                   onChanged: _onSearchChanged,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 22,
+                    fontSize: 18.w,
                   ),
                   decoration: InputDecoration(
                     hintText: "Search product",
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.search,
-                      size: 30,
+                      size: 25.w,
                     ),
-                    hintStyle: const TextStyle(
+                    hintStyle: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: 22,
+                      fontSize: 18.w,
                     ),
                     filled: true,
                     fillColor: Colors.grey[200],
@@ -386,15 +387,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
               flex: 1,
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 2),
-                width: 50,
-                height: 50,
+                width: 45.w,
+                height: 45.w,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle, color: Colors.grey[200]),
                 child: IconButton(
                   icon: Icon(
                     Icons.shopping_cart_outlined,
                     color: Theme.of(context).iconTheme.color?.withOpacity(0.6),
-                    size: 30,
+                    size: 25.w,
                   ),
                   onPressed: () {},
                 ),
@@ -404,15 +405,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
               flex: 1,
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 2),
-                width: 50,
-                height: 50,
+                width: 45.w,
+                height: 45.w,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle, color: Colors.grey[200]),
                 child: IconButton(
                   icon: Icon(
                     Icons.notifications_outlined,
                     color: Theme.of(context).iconTheme.color?.withOpacity(0.6),
-                    size: 30,
+                    size: 25.w,
                   ),
                   onPressed: () {},
                 ),
@@ -458,7 +459,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 baseColor: Colors.grey[300]!,
                 highlightColor: Colors.grey[100]!,
                 child: Container(
-                  height: 230,
+                  height: 180.w,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
                     borderRadius:
@@ -476,14 +477,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 30,
+                        height: 30.w,
                         width: double.infinity,
                         color: Colors.black54,
                       ),
                       const SizedBox(height: 8),
                       Container(
-                        height: 20,
-                        width: 80,
+                        height: 20.w,
+                        width: 80.w,
                         color: Colors.orange,
                       ),
                     ],

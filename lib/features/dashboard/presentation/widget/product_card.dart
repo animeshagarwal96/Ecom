@@ -1,4 +1,5 @@
 import 'package:ecom/features/dashboard/data/model/product_response.dart';
+import 'package:ecom/screen_util/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatefulWidget {
@@ -17,7 +18,7 @@ class _ProductCardState extends State<ProductCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 200,
+            height: 180.w,
             decoration: BoxDecoration(
               // color: Colors.grey[300],
               image: DecorationImage(
@@ -35,34 +36,34 @@ class _ProductCardState extends State<ProductCard> {
                   widget.model.title ?? "",
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 16.w,
                       color: Colors.black54),
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "\$${widget.model.price}",
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.orange,
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: 14.w,
                       ),
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 2),
-                      width: 40,
-                      height: 40,
+                      width: 35.w,
+                      height: 35.w,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, color: Colors.red[50]),
                       child: IconButton(
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.favorite,
                           color: Colors.red,
-                          size: 20,
+                          size: 16.w,
                         ),
                         onPressed: () {},
                       ),
