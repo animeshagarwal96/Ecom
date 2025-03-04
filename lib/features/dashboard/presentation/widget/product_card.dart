@@ -41,13 +41,33 @@ class _ProductCardState extends State<ProductCard> {
                       color: Colors.black54),
                 ),
                 const SizedBox(height: 4),
-                Text(
-                  "\$${widget.model.price}",
-                  style: const TextStyle(
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "\$${widget.model.price}",
+                      style: const TextStyle(
+                        color: Colors.orange,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 2),
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.red[50]),
+                      child: IconButton(
+                        icon: const Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                          size: 20,
+                        ),
+                        onPressed: () {},
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),

@@ -166,7 +166,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                childAspectRatio: 0.60,
+                                childAspectRatio: 0.55,
                                 crossAxisSpacing: 8,
                                 mainAxisSpacing: 8,
                               ),
@@ -428,7 +428,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       itemCount: 6, // Show shimmer effect for 6 items
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.65,
+        childAspectRatio: 0.60,
         crossAxisSpacing: 8,
         mainAxisSpacing: 8,
       ),
@@ -446,7 +446,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 baseColor: Colors.grey[300]!,
                 highlightColor: Colors.grey[100]!,
                 child: Container(
-                  height: 200,
+                  height: 230,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
                     borderRadius:

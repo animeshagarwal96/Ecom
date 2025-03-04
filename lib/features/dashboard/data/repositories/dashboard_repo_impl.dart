@@ -19,13 +19,17 @@ class DashboardRepoImpl extends DashboardRepo {
   @override
   Future<Either<Failure, List<ProductResponseModel>>> getProductList() async {
     if (await networkInfo.isConnected) {
-      final data = await remoteDatasource.getProductList();
-      if (data.isNotEmpty) {
-        localDatasource.setProductList(data);
-        return right(data);
-      } else {
-        final saveData = await localDatasource.getProductList();
-        return right(saveData);
+      try {
+        final data = await remoteDatasource.getProductList();
+        if (data.isNotEmpty) {
+          localDatasource.setProductList(data);
+          return right(data);
+        } else {
+          final saveData = await localDatasource.getProductList();
+          return right(saveData);
+        }
+      } catch (e) {
+        return left(ServerFailure());
       }
     } else {
       final data = await localDatasource.getProductList();
