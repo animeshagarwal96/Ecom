@@ -67,7 +67,6 @@ This Flutter application recreates an e-commerce shop's home page UI, integratin
 
 ## Future Enhancements
 
-- **Animations**: Adding micro-interactions to enhance user experience.
 - **Offline Mode**: Caching product data for better performance.
 - **Enhanced Filtering**: Multi-filter options based on Category.
 
